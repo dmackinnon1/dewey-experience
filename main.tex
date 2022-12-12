@@ -1,0 +1,102 @@
+
+\documentclass[fontsize=12pt,a5paper,BCOR=12mm,DIV=calc,twoside]{scrbook}
+\usepackage[scaled=.92]{helvet}
+\KOMAoption{chapterprefix}{true}
+\DeclareSectionCommand[%
+innerskip=0pt,%0.5\baselineskip
+font={\Large},
+prefixfont={\LARGE}
+]{chapter}
+
+\setlength{\parskip}{14pt} %check for a better KOMA option here
+\setlength{\parindent}{1cm}
+%\usepackage[fontsize=12.5pt]{scrextend}
+\usepackage{csquotes}
+\usepackage{epigraph}
+%\hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
+\input{borrowed_tufte}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+%%
+% Book metadata
+\title{Experience and Education}
+\author{John Dewey}
+\date{}
+
+
+\begin{document}
+% Front matter
+\frontmatter
+%% COVER
+\makeatletter
+\begin{titlepage}
+	% https://github.com/johannesbottcher/titlepageExamples/blob/master/eel.tex
+	\setlength{\parindent}{0pt}
+	\vspace*{.15\textheight}
+	{\LARGE \sffamily \scshape \@author\par}
+	\medbreak
+	{\Huge \sffamily Experience and Education\par}
+	\medbreak
+	{\small The great educational theorist's most concise statment of his ideas about the needs, the problems, and the possibilities of education -- written \textit{after} his experiences with the progressive schools and in the light of the criticisms his theories received.\par}
+\end{titlepage}
+\makeatother
+%% EPIGRAPHS
+\input{content/epigraphs}
+
+%% INSIDE TITLE
+\makeatletter
+\begin{titlepage}
+	% https://github.com/johannesbottcher/titlepageExamples/blob/master/eel.tex
+	\setlength{\parindent}{0pt}
+	\vspace*{.15\textheight}
+	\bigbreak
+	{\Huge \slshape	 Experience and Education\par}
+	\medbreak
+	{\Large by \scshape \@author\par}
+	\bigbreak
+	{The Kappa Delta Phi Lecture Series}
+        \vfill
+        {\small From the Internet Archive}\par
+        {\tiny \url{https://archive.org/stream/ExperienceAndEducation-JohnDewey/dewey-edu-experience_djvu.txt}}
+\end{titlepage}
+\makeatother
+
+\chapter*{John Dewey}
+\input{content/bio}
+
+\chapter*{Editorial Forward}
+\input{content/editorial}
+
+\chapter*{Preface}
+\input{content/preface}
+
+\tableofcontents
+\mainmatter
+
+
+\chapter{Traditional vs. Progressive Education}
+\input{content/chapter1}
+
+\chapter{The Need of a Theory of Experience}
+\input{content/chapter2}
+
+\chapter{Criteria of Experience}
+\input{content/chapter3}
+
+\chapter{Social control}
+\input{content/chapter4}
+
+\chapter{The Nature of Freedom}
+\input{content/chapter5}
+
+\chapter{The Meaning of Purpose}
+\input{content/chapter6}
+
+\chapter{Progressive Organization of Subject Matter}
+\input{content/chapter7}
+
+\chapter{Experience -- The Means and Goal of Education }
+\input{content/chapter8}
+
+\end{document}
