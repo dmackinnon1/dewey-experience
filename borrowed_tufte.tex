@@ -1,5 +1,5 @@
-%%
-% Amount of space to skip before \newthought or after title block
+% The newthought command is borrowed from https://tufte-latex.github.io/tufte-latex/
+%
 
 \newskip\tufteskipamount
 \tufteskipamount=1.0\baselineskip plus 0.5ex minus 0.2ex
@@ -8,9 +8,6 @@
   \removelastskip\penalty-100\tufteskip\fi}
 
 \newcommand{\tufteskip}{\vspace\tufteskipamount}
-
-%%
-% An environment for paragraph-style section
 
 \newcommand\newthought[1]{%
    \tuftebreak
